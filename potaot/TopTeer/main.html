@@ -1,0 +1,114 @@
+﻿<html>
+<head>
+    <title>TopTeer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--<script src="jquery-3.4.0.min.js">
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function() {
+            $('#slideshow > div:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('#slideshow');
+        },  3000);
+    </script>-->
+
+</head>
+<body id="playSound();">
+<audio id="audio" src="http://www.brainybetty.com/FacebookFans/Feb112010/strings3.wav" autoplay="true" ></audio>
+
+   <script>
+   function playSound() {
+         var sound = document.getElementById("audio");
+         sound.play();
+     }
+   </script>
+
+</head>
+<body>
+    <h1>TopTeer: Volunteer Opportunities Near You!</h1>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="log.html">My Log</a>
+    </div>
+    <div class="filters">
+        <form action="results.html" method="get">
+            <input type="checkbox" id="check1" onclick="myFunction()">Environment<br>
+            <input type="checkbox" name="volunteer" value="Hunger">Hunger<br>
+            <input type="checkbox" name="volunteer" value="Homelessness" >Homelessness<br>
+            <input type="checkbox" name="volunteer" value="Animals">Animals<br>
+            <input type="checkbox" name="volunteer" value="Education" >Education<br>
+
+            <input type="submit" value="Submit"> <!--link to results page-->
+        </form>
+    </div>
+    <table id=table1 style="display:none">
+            <tr>
+              <th>Name</th>
+              <th>Longitude</th>
+              <th>Latitude</th>
+            </tr>
+            <tr>
+              <td><a href = "https://goo.gl/maps/WyBsubsRHsp" target = "_self">The Nature Conservancy</a></td>
+              <td>40.747140</td>
+              <td>-73.996460</td>
+            </tr>
+            <tr>
+              <td><a href = "https://goo.gl/maps/e1RSQoHAYRr" target = "_self">Build It Green NYC</a></td>
+              <td>40.777170</td>
+              <td>-73.935630</td>
+            </tr>
+          </table>
+
+    <div class="slideshow">
+        <!--divs between each image, use js to iterate-->
+        <div class="mySlide">
+            <img src="images/cat1.jpeg">
+        </div>
+        <div class="mySlide">
+            <img src="images/cat2.jpeg">
+        </div>
+        <div class="mySlide">
+            <img src="images/cat3.jpeg">
+        </div>
+        <div class="mySlide">
+            <img src="images/cat4.jpeg">
+        </div>
+        
+    </div>
+    <div class="footer">
+        <p>© Kevin C. Nichole F. Karen L. Shreya P. and Clara P.</p>
+    </div>
+
+    <script>
+function myFunction() {
+ var checkBox = document.getElementById("check1");
+ var table = document.getElementById("table1");
+
+ // If the checkbox is checked, display the output text
+ if (checkBox.checked == true){
+   table.style.display = "block";
+ } else {
+   table.style.display = "none";
+ }
+}
+
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            var slides = document.getElementsByClassName("mySlide");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+
+                slides[slideIndex-1].style.display = "block";
+ setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>

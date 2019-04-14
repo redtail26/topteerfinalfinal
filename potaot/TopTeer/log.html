@@ -1,0 +1,170 @@
+﻿<html>
+
+<head>
+
+	<title>TopTeer</title>
+	
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body id="playSound();">
+<audio id="audio" src="http://www.brainybetty.com/FacebookFans/Feb112010/ChillingMusic.wav" autoplay="true" ></audio>
+
+    <script>
+    function playSound() {
+          var sound = document.getElementById("audio");
+          sound.play();
+      }
+    </script>
+
+	
+<!--implementing javascript-->
+	
+<script>
+		
+function myFunction(){
+
+			
+var inputDay=document.getElementById("day");
+			
+var inputOrg=document.getElementById("org");
+			
+var inputHours=document.getElementById("hours");			
+var table= document.getElementById("table");
+			
+var row= table.insertRow(2);
+			
+row.insertCell(0).innerHTML = inputDay.value;
+			
+row.insertCell(1).innerHTML = inputOrg.value;
+			
+row.insertCell(2).innerHTML = inputHours.value;
+
+	
+	}
+		
+localStorage.setItem(inputDay,"day");
+		
+localStorage.setItem(inputDay,"org");
+		
+localStorage.setItem(inputDay,"hours");	
+</script>
+	
+<h1>TopTeer: Volunteer Opportunities Near You!</h1>
+	
+<div class="topnav">
+		
+<a href="main.html">Home</a>
+		
+<a class="active" href="#log">My Log</a>
+	
+</div>
+	
+<h2>My Log</h2> 
+	
+<table id="table">
+		
+<tr>
+			
+<th>Date</th>
+			
+<th>Organization</th>
+			
+<th>Hours</th>
+		
+</tr>
+		
+<tr>
+			
+<!--example-->
+			
+<td>4/13/2019</td>
+			
+<td>Go Project</td>
+			
+<td>4</td>
+
+</tr>
+	
+</table>
+	
+<h3>New Log Entry</h3>
+	
+<!--<form>-->
+		
+Date<input type="date" name="date" id="day">
+		
+Organization<input type="text" name="orgname" id="org">
+		
+Hours<input type="number" name="hours" id="hours">
+	
+<button onclick="myFunction();">OK</button>
+		
+<!--</form>-->
+	
+</body>
+	
+<div class="slideshow">
+	
+<!--divs between each image, use js to iterate-->
+		
+<div class="mySlide">
+			<img src="https://www.testmasters.net/images/hero/Tutoring.png">
+		</div>
+	
+<div class="mySlide">
+			<img src="https://www.brainerddispatch.com/sites/default/files/styles/16x9_620/public/fieldimages/42/0815/0b7rw7divrmlxnzznbexwnxdzbta.jpg?itok=WC-wC7lU">
+		</div>
+
+<div class="mySlide">
+			<img src ="https://camprooster.s3.amazonaws.com/uploads/camp/photo/11302/cropped_-kids-camp-community-service-infrastructure-development-environmental-conservation-with-sailing-21-days.jpg">
+		</div>
+
+<div class="mySlide">
+			<img src="https://www.vet.upenn.edu/images/default-source/ryan-hospital/Ryan-Nursing/emma-and-nurses-small.jpg?sfvrsn=b4de09ba_2">
+		</div>
+	
+<div class = "mySlide">   	<img src = "https://timesofsandiego.com/wp-content/uploads/2014/12/Barrio-Logan-Shelter.jpg">	
+	</div>
+	
+<div class="footer">
+		
+<p>© Kevin C. Nichole F. Karen L. Shreya P. and Clara P.</p>
+	
+</div>
+
+	
+<script>
+		
+var slideIndex = 0;
+		
+showSlides();
+		
+function showSlides() {
+			
+var slides = document.getElementsByClassName("mySlide");
+
+			
+for (i = 0; i < slides.length; i++) {
+				
+slides[i].style.display = "none";  
+			
+}
+			
+slideIndex++;
+			
+if (slideIndex > slides.length) {slideIndex = 1} 
+
+				
+slides[slideIndex-1].style.display = "block";  
+  
+setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+</script>
+
+
+</div>
+	
+</html>
